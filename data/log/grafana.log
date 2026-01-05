@@ -1,0 +1,1233 @@
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=eror msg="Failed to detect generated javascript files in public/build"
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-02T14:12:53.18+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-02T14:12:53.18+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2025-11-02T14:12:53.18+0000 lvl=info msg="Creating SQLite database file" path=/workspaces/AKMinds/grafana/data/grafana.db
+logger=migrator t=2025-11-02T14:12:53.18+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-02T14:12:53.18+0000 lvl=info msg="Executing migration" id="create migration_log table"
+logger=migrator t=2025-11-02T14:12:53.18+0000 lvl=info msg="Executing migration" id="create user table"
+logger=migrator t=2025-11-02T14:12:53.18+0000 lvl=info msg="Executing migration" id="add unique index user.login"
+logger=migrator t=2025-11-02T14:12:53.19+0000 lvl=info msg="Executing migration" id="add unique index user.email"
+logger=migrator t=2025-11-02T14:12:53.19+0000 lvl=info msg="Executing migration" id="drop index UQE_user_login - v1"
+logger=migrator t=2025-11-02T14:12:53.19+0000 lvl=info msg="Executing migration" id="drop index UQE_user_email - v1"
+logger=migrator t=2025-11-02T14:12:53.2+0000 lvl=info msg="Executing migration" id="Rename table user to user_v1 - v1"
+logger=migrator t=2025-11-02T14:12:53.2+0000 lvl=info msg="Executing migration" id="create user table v2"
+logger=migrator t=2025-11-02T14:12:53.2+0000 lvl=info msg="Executing migration" id="create index UQE_user_login - v2"
+logger=migrator t=2025-11-02T14:12:53.2+0000 lvl=info msg="Executing migration" id="create index UQE_user_email - v2"
+logger=migrator t=2025-11-02T14:12:53.21+0000 lvl=info msg="Executing migration" id="copy data_source v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.21+0000 lvl=info msg="Executing migration" id="Drop old table user_v1"
+logger=migrator t=2025-11-02T14:12:53.21+0000 lvl=info msg="Executing migration" id="Add column help_flags1 to user table"
+logger=migrator t=2025-11-02T14:12:53.21+0000 lvl=info msg="Executing migration" id="Update user table charset"
+logger=migrator t=2025-11-02T14:12:53.21+0000 lvl=info msg="Executing migration" id="Add last_seen_at column to user"
+logger=migrator t=2025-11-02T14:12:53.22+0000 lvl=info msg="Executing migration" id="Add missing user data"
+logger=migrator t=2025-11-02T14:12:53.22+0000 lvl=info msg="Executing migration" id="Add is_disabled column to user"
+logger=migrator t=2025-11-02T14:12:53.22+0000 lvl=info msg="Executing migration" id="Add index user.login/user.email"
+logger=migrator t=2025-11-02T14:12:53.22+0000 lvl=info msg="Executing migration" id="Add is_service_account column to user"
+logger=migrator t=2025-11-02T14:12:53.22+0000 lvl=info msg="Executing migration" id="Update is_service_account column to nullable"
+logger=migrator t=2025-11-02T14:12:53.23+0000 lvl=info msg="Executing migration" id="create temp user table v1-7"
+logger=migrator t=2025-11-02T14:12:53.23+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_email - v1-7"
+logger=migrator t=2025-11-02T14:12:53.23+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_org_id - v1-7"
+logger=migrator t=2025-11-02T14:12:53.23+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_code - v1-7"
+logger=migrator t=2025-11-02T14:12:53.23+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_status - v1-7"
+logger=migrator t=2025-11-02T14:12:53.24+0000 lvl=info msg="Executing migration" id="Update temp_user table charset"
+logger=migrator t=2025-11-02T14:12:53.24+0000 lvl=info msg="Executing migration" id="drop index IDX_temp_user_email - v1"
+logger=migrator t=2025-11-02T14:12:53.24+0000 lvl=info msg="Executing migration" id="drop index IDX_temp_user_org_id - v1"
+logger=migrator t=2025-11-02T14:12:53.24+0000 lvl=info msg="Executing migration" id="drop index IDX_temp_user_code - v1"
+logger=migrator t=2025-11-02T14:12:53.24+0000 lvl=info msg="Executing migration" id="drop index IDX_temp_user_status - v1"
+logger=migrator t=2025-11-02T14:12:53.25+0000 lvl=info msg="Executing migration" id="Rename table temp_user to temp_user_tmp_qwerty - v1"
+logger=migrator t=2025-11-02T14:12:53.25+0000 lvl=info msg="Executing migration" id="create temp_user v2"
+logger=migrator t=2025-11-02T14:12:53.25+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_email - v2"
+logger=migrator t=2025-11-02T14:12:53.25+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_org_id - v2"
+logger=migrator t=2025-11-02T14:12:53.26+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_code - v2"
+logger=migrator t=2025-11-02T14:12:53.26+0000 lvl=info msg="Executing migration" id="create index IDX_temp_user_status - v2"
+logger=migrator t=2025-11-02T14:12:53.26+0000 lvl=info msg="Executing migration" id="copy temp_user v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.26+0000 lvl=info msg="Executing migration" id="drop temp_user_tmp_qwerty"
+logger=migrator t=2025-11-02T14:12:53.26+0000 lvl=info msg="Executing migration" id="Set created for temp users that will otherwise prematurely expire"
+logger=migrator t=2025-11-02T14:12:53.26+0000 lvl=info msg="Executing migration" id="create star table"
+logger=migrator t=2025-11-02T14:12:53.27+0000 lvl=info msg="Executing migration" id="add unique index star.user_id_dashboard_id"
+logger=migrator t=2025-11-02T14:12:53.27+0000 lvl=info msg="Executing migration" id="create org table v1"
+logger=migrator t=2025-11-02T14:12:53.27+0000 lvl=info msg="Executing migration" id="create index UQE_org_name - v1"
+logger=migrator t=2025-11-02T14:12:53.27+0000 lvl=info msg="Executing migration" id="create org_user table v1"
+logger=migrator t=2025-11-02T14:12:53.27+0000 lvl=info msg="Executing migration" id="create index IDX_org_user_org_id - v1"
+logger=migrator t=2025-11-02T14:12:53.28+0000 lvl=info msg="Executing migration" id="create index UQE_org_user_org_id_user_id - v1"
+logger=migrator t=2025-11-02T14:12:53.28+0000 lvl=info msg="Executing migration" id="create index IDX_org_user_user_id - v1"
+logger=migrator t=2025-11-02T14:12:53.28+0000 lvl=info msg="Executing migration" id="Update org table charset"
+logger=migrator t=2025-11-02T14:12:53.28+0000 lvl=info msg="Executing migration" id="Update org_user table charset"
+logger=migrator t=2025-11-02T14:12:53.28+0000 lvl=info msg="Executing migration" id="Migrate all Read Only Viewers to Viewers"
+logger=migrator t=2025-11-02T14:12:53.29+0000 lvl=info msg="Executing migration" id="create dashboard table"
+logger=migrator t=2025-11-02T14:12:53.29+0000 lvl=info msg="Executing migration" id="add index dashboard.account_id"
+logger=migrator t=2025-11-02T14:12:53.29+0000 lvl=info msg="Executing migration" id="add unique index dashboard_account_id_slug"
+logger=migrator t=2025-11-02T14:12:53.29+0000 lvl=info msg="Executing migration" id="create dashboard_tag table"
+logger=migrator t=2025-11-02T14:12:53.3+0000 lvl=info msg="Executing migration" id="add unique index dashboard_tag.dasboard_id_term"
+logger=migrator t=2025-11-02T14:12:53.3+0000 lvl=info msg="Executing migration" id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+logger=migrator t=2025-11-02T14:12:53.3+0000 lvl=info msg="Executing migration" id="Rename table dashboard to dashboard_v1 - v1"
+logger=migrator t=2025-11-02T14:12:53.3+0000 lvl=info msg="Executing migration" id="create dashboard v2"
+logger=migrator t=2025-11-02T14:12:53.3+0000 lvl=info msg="Executing migration" id="create index IDX_dashboard_org_id - v2"
+logger=migrator t=2025-11-02T14:12:53.31+0000 lvl=info msg="Executing migration" id="create index UQE_dashboard_org_id_slug - v2"
+logger=migrator t=2025-11-02T14:12:53.31+0000 lvl=info msg="Executing migration" id="copy dashboard v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.31+0000 lvl=info msg="Executing migration" id="drop table dashboard_v1"
+logger=migrator t=2025-11-02T14:12:53.31+0000 lvl=info msg="Executing migration" id="alter dashboard.data to mediumtext v1"
+logger=migrator t=2025-11-02T14:12:53.31+0000 lvl=info msg="Executing migration" id="Add column updated_by in dashboard - v2"
+logger=migrator t=2025-11-02T14:12:53.32+0000 lvl=info msg="Executing migration" id="Add column created_by in dashboard - v2"
+logger=migrator t=2025-11-02T14:12:53.32+0000 lvl=info msg="Executing migration" id="Add column gnetId in dashboard"
+logger=migrator t=2025-11-02T14:12:53.32+0000 lvl=info msg="Executing migration" id="Add index for gnetId in dashboard"
+logger=migrator t=2025-11-02T14:12:53.32+0000 lvl=info msg="Executing migration" id="Add column plugin_id in dashboard"
+logger=migrator t=2025-11-02T14:12:53.32+0000 lvl=info msg="Executing migration" id="Add index for plugin_id in dashboard"
+logger=migrator t=2025-11-02T14:12:53.32+0000 lvl=info msg="Executing migration" id="Add index for dashboard_id in dashboard_tag"
+logger=migrator t=2025-11-02T14:12:53.33+0000 lvl=info msg="Executing migration" id="Update dashboard table charset"
+logger=migrator t=2025-11-02T14:12:53.33+0000 lvl=info msg="Executing migration" id="Update dashboard_tag table charset"
+logger=migrator t=2025-11-02T14:12:53.33+0000 lvl=info msg="Executing migration" id="Add column folder_id in dashboard"
+logger=migrator t=2025-11-02T14:12:53.33+0000 lvl=info msg="Executing migration" id="Add column isFolder in dashboard"
+logger=migrator t=2025-11-02T14:12:53.33+0000 lvl=info msg="Executing migration" id="Add column has_acl in dashboard"
+logger=migrator t=2025-11-02T14:12:53.34+0000 lvl=info msg="Executing migration" id="Add column uid in dashboard"
+logger=migrator t=2025-11-02T14:12:53.34+0000 lvl=info msg="Executing migration" id="Update uid column values in dashboard"
+logger=migrator t=2025-11-02T14:12:53.34+0000 lvl=info msg="Executing migration" id="Add unique index dashboard_org_id_uid"
+logger=migrator t=2025-11-02T14:12:53.34+0000 lvl=info msg="Executing migration" id="Remove unique index org_id_slug"
+logger=migrator t=2025-11-02T14:12:53.34+0000 lvl=info msg="Executing migration" id="Update dashboard title length"
+logger=migrator t=2025-11-02T14:12:53.35+0000 lvl=info msg="Executing migration" id="Add unique index for dashboard_org_id_title_folder_id"
+logger=migrator t=2025-11-02T14:12:53.35+0000 lvl=info msg="Executing migration" id="create dashboard_provisioning"
+logger=migrator t=2025-11-02T14:12:53.35+0000 lvl=info msg="Executing migration" id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+logger=migrator t=2025-11-02T14:12:53.35+0000 lvl=info msg="Executing migration" id="create dashboard_provisioning v2"
+logger=migrator t=2025-11-02T14:12:53.35+0000 lvl=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+logger=migrator t=2025-11-02T14:12:53.35+0000 lvl=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+logger=migrator t=2025-11-02T14:12:53.36+0000 lvl=info msg="Executing migration" id="copy dashboard_provisioning v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.36+0000 lvl=info msg="Executing migration" id="drop dashboard_provisioning_tmp_qwerty"
+logger=migrator t=2025-11-02T14:12:53.36+0000 lvl=info msg="Executing migration" id="Add check_sum column"
+logger=migrator t=2025-11-02T14:12:53.36+0000 lvl=info msg="Executing migration" id="Add index for dashboard_title"
+logger=migrator t=2025-11-02T14:12:53.36+0000 lvl=info msg="Executing migration" id="delete tags for deleted dashboards"
+logger=migrator t=2025-11-02T14:12:53.36+0000 lvl=info msg="Executing migration" id="delete stars for deleted dashboards"
+logger=migrator t=2025-11-02T14:12:53.37+0000 lvl=info msg="Executing migration" id="Add index for dashboard_is_folder"
+logger=migrator t=2025-11-02T14:12:53.37+0000 lvl=info msg="Executing migration" id="create data_source table"
+logger=migrator t=2025-11-02T14:12:53.37+0000 lvl=info msg="Executing migration" id="add index data_source.account_id"
+logger=migrator t=2025-11-02T14:12:53.37+0000 lvl=info msg="Executing migration" id="add unique index data_source.account_id_name"
+logger=migrator t=2025-11-02T14:12:53.37+0000 lvl=info msg="Executing migration" id="drop index IDX_data_source_account_id - v1"
+logger=migrator t=2025-11-02T14:12:53.38+0000 lvl=info msg="Executing migration" id="drop index UQE_data_source_account_id_name - v1"
+logger=migrator t=2025-11-02T14:12:53.38+0000 lvl=info msg="Executing migration" id="Rename table data_source to data_source_v1 - v1"
+logger=migrator t=2025-11-02T14:12:53.38+0000 lvl=info msg="Executing migration" id="create data_source table v2"
+logger=migrator t=2025-11-02T14:12:53.38+0000 lvl=info msg="Executing migration" id="create index IDX_data_source_org_id - v2"
+logger=migrator t=2025-11-02T14:12:53.38+0000 lvl=info msg="Executing migration" id="create index UQE_data_source_org_id_name - v2"
+logger=migrator t=2025-11-02T14:12:53.39+0000 lvl=info msg="Executing migration" id="copy data_source v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.39+0000 lvl=info msg="Executing migration" id="Drop old table data_source_v1 #2"
+logger=migrator t=2025-11-02T14:12:53.39+0000 lvl=info msg="Executing migration" id="Add column with_credentials"
+logger=migrator t=2025-11-02T14:12:53.39+0000 lvl=info msg="Executing migration" id="Add secure json data column"
+logger=migrator t=2025-11-02T14:12:53.39+0000 lvl=info msg="Executing migration" id="Update data_source table charset"
+logger=migrator t=2025-11-02T14:12:53.39+0000 lvl=info msg="Executing migration" id="Update initial version to 1"
+logger=migrator t=2025-11-02T14:12:53.4+0000 lvl=info msg="Executing migration" id="Add read_only data column"
+logger=migrator t=2025-11-02T14:12:53.4+0000 lvl=info msg="Executing migration" id="Migrate logging ds to loki ds"
+logger=migrator t=2025-11-02T14:12:53.4+0000 lvl=info msg="Executing migration" id="Update json_data with nulls"
+logger=migrator t=2025-11-02T14:12:53.4+0000 lvl=info msg="Executing migration" id="Add uid column"
+logger=migrator t=2025-11-02T14:12:53.4+0000 lvl=info msg="Executing migration" id="Update uid value"
+logger=migrator t=2025-11-02T14:12:53.4+0000 lvl=info msg="Executing migration" id="Add unique index datasource_org_id_uid"
+logger=migrator t=2025-11-02T14:12:53.41+0000 lvl=info msg="Executing migration" id="add unique index datasource_org_id_is_default"
+logger=migrator t=2025-11-02T14:12:53.41+0000 lvl=info msg="Executing migration" id="create api_key table"
+logger=migrator t=2025-11-02T14:12:53.41+0000 lvl=info msg="Executing migration" id="add index api_key.account_id"
+logger=migrator t=2025-11-02T14:12:53.41+0000 lvl=info msg="Executing migration" id="add index api_key.key"
+logger=migrator t=2025-11-02T14:12:53.42+0000 lvl=info msg="Executing migration" id="add index api_key.account_id_name"
+logger=migrator t=2025-11-02T14:12:53.42+0000 lvl=info msg="Executing migration" id="drop index IDX_api_key_account_id - v1"
+logger=migrator t=2025-11-02T14:12:53.42+0000 lvl=info msg="Executing migration" id="drop index UQE_api_key_key - v1"
+logger=migrator t=2025-11-02T14:12:53.42+0000 lvl=info msg="Executing migration" id="drop index UQE_api_key_account_id_name - v1"
+logger=migrator t=2025-11-02T14:12:53.42+0000 lvl=info msg="Executing migration" id="Rename table api_key to api_key_v1 - v1"
+logger=migrator t=2025-11-02T14:12:53.42+0000 lvl=info msg="Executing migration" id="create api_key table v2"
+logger=migrator t=2025-11-02T14:12:53.43+0000 lvl=info msg="Executing migration" id="create index IDX_api_key_org_id - v2"
+logger=migrator t=2025-11-02T14:12:53.43+0000 lvl=info msg="Executing migration" id="create index UQE_api_key_key - v2"
+logger=migrator t=2025-11-02T14:12:53.43+0000 lvl=info msg="Executing migration" id="create index UQE_api_key_org_id_name - v2"
+logger=migrator t=2025-11-02T14:12:53.43+0000 lvl=info msg="Executing migration" id="copy api_key v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.43+0000 lvl=info msg="Executing migration" id="Drop old table api_key_v1"
+logger=migrator t=2025-11-02T14:12:53.44+0000 lvl=info msg="Executing migration" id="Update api_key table charset"
+logger=migrator t=2025-11-02T14:12:53.44+0000 lvl=info msg="Executing migration" id="Add expires to api_key table"
+logger=migrator t=2025-11-02T14:12:53.44+0000 lvl=info msg="Executing migration" id="Add service account foreign key"
+logger=migrator t=2025-11-02T14:12:53.44+0000 lvl=info msg="Executing migration" id="set service account foreign key to nil if 0"
+logger=migrator t=2025-11-02T14:12:53.44+0000 lvl=info msg="Executing migration" id="create dashboard_snapshot table v4"
+logger=migrator t=2025-11-02T14:12:53.44+0000 lvl=info msg="Executing migration" id="drop table dashboard_snapshot_v4 #1"
+logger=migrator t=2025-11-02T14:12:53.45+0000 lvl=info msg="Executing migration" id="create dashboard_snapshot table v5 #2"
+logger=migrator t=2025-11-02T14:12:53.45+0000 lvl=info msg="Executing migration" id="create index UQE_dashboard_snapshot_key - v5"
+logger=migrator t=2025-11-02T14:12:53.45+0000 lvl=info msg="Executing migration" id="create index UQE_dashboard_snapshot_delete_key - v5"
+logger=migrator t=2025-11-02T14:12:53.45+0000 lvl=info msg="Executing migration" id="create index IDX_dashboard_snapshot_user_id - v5"
+logger=migrator t=2025-11-02T14:12:53.45+0000 lvl=info msg="Executing migration" id="alter dashboard_snapshot to mediumtext v2"
+logger=migrator t=2025-11-02T14:12:53.46+0000 lvl=info msg="Executing migration" id="Update dashboard_snapshot table charset"
+logger=migrator t=2025-11-02T14:12:53.46+0000 lvl=info msg="Executing migration" id="Add column external_delete_url to dashboard_snapshots table"
+logger=migrator t=2025-11-02T14:12:53.46+0000 lvl=info msg="Executing migration" id="Add encrypted dashboard json column"
+logger=migrator t=2025-11-02T14:12:53.46+0000 lvl=info msg="Executing migration" id="Change dashboard_encrypted column to MEDIUMBLOB"
+logger=migrator t=2025-11-02T14:12:53.46+0000 lvl=info msg="Executing migration" id="create quota table v1"
+logger=migrator t=2025-11-02T14:12:53.46+0000 lvl=info msg="Executing migration" id="create index UQE_quota_org_id_user_id_target - v1"
+logger=migrator t=2025-11-02T14:12:53.47+0000 lvl=info msg="Executing migration" id="Update quota table charset"
+logger=migrator t=2025-11-02T14:12:53.47+0000 lvl=info msg="Executing migration" id="create plugin_setting table"
+logger=migrator t=2025-11-02T14:12:53.47+0000 lvl=info msg="Executing migration" id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+logger=migrator t=2025-11-02T14:12:53.47+0000 lvl=info msg="Executing migration" id="Add column plugin_version to plugin_settings"
+logger=migrator t=2025-11-02T14:12:53.48+0000 lvl=info msg="Executing migration" id="Update plugin_setting table charset"
+logger=migrator t=2025-11-02T14:12:53.48+0000 lvl=info msg="Executing migration" id="create session table"
+logger=migrator t=2025-11-02T14:12:53.48+0000 lvl=info msg="Executing migration" id="Drop old table playlist table"
+logger=migrator t=2025-11-02T14:12:53.48+0000 lvl=info msg="Executing migration" id="Drop old table playlist_item table"
+logger=migrator t=2025-11-02T14:12:53.49+0000 lvl=info msg="Executing migration" id="create playlist table v2"
+logger=migrator t=2025-11-02T14:12:53.49+0000 lvl=info msg="Executing migration" id="create playlist item table v2"
+logger=migrator t=2025-11-02T14:12:53.49+0000 lvl=info msg="Executing migration" id="Update playlist table charset"
+logger=migrator t=2025-11-02T14:12:53.49+0000 lvl=info msg="Executing migration" id="Update playlist_item table charset"
+logger=migrator t=2025-11-02T14:12:53.5+0000 lvl=info msg="Executing migration" id="drop preferences table v2"
+logger=migrator t=2025-11-02T14:12:53.5+0000 lvl=info msg="Executing migration" id="drop preferences table v3"
+logger=migrator t=2025-11-02T14:12:53.5+0000 lvl=info msg="Executing migration" id="create preferences table v3"
+logger=migrator t=2025-11-02T14:12:53.5+0000 lvl=info msg="Executing migration" id="Update preferences table charset"
+logger=migrator t=2025-11-02T14:12:53.5+0000 lvl=info msg="Executing migration" id="Add column team_id in preferences"
+logger=migrator t=2025-11-02T14:12:53.51+0000 lvl=info msg="Executing migration" id="Update team_id column values in preferences"
+logger=migrator t=2025-11-02T14:12:53.51+0000 lvl=info msg="Executing migration" id="Add column week_start in preferences"
+logger=migrator t=2025-11-02T14:12:53.51+0000 lvl=info msg="Executing migration" id="Add column preferences.json_data"
+logger=migrator t=2025-11-02T14:12:53.51+0000 lvl=info msg="Executing migration" id="alter preferences.json_data to mediumtext v1"
+logger=migrator t=2025-11-02T14:12:53.51+0000 lvl=info msg="Executing migration" id="create alert table v1"
+logger=migrator t=2025-11-02T14:12:53.52+0000 lvl=info msg="Executing migration" id="add index alert org_id & id "
+logger=migrator t=2025-11-02T14:12:53.52+0000 lvl=info msg="Executing migration" id="add index alert state"
+logger=migrator t=2025-11-02T14:12:53.52+0000 lvl=info msg="Executing migration" id="add index alert dashboard_id"
+logger=migrator t=2025-11-02T14:12:53.52+0000 lvl=info msg="Executing migration" id="Create alert_rule_tag table v1"
+logger=migrator t=2025-11-02T14:12:53.53+0000 lvl=info msg="Executing migration" id="Add unique index alert_rule_tag.alert_id_tag_id"
+logger=migrator t=2025-11-02T14:12:53.53+0000 lvl=info msg="Executing migration" id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
+logger=migrator t=2025-11-02T14:12:53.53+0000 lvl=info msg="Executing migration" id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
+logger=migrator t=2025-11-02T14:12:53.53+0000 lvl=info msg="Executing migration" id="Create alert_rule_tag table v2"
+logger=migrator t=2025-11-02T14:12:53.54+0000 lvl=info msg="Executing migration" id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
+logger=migrator t=2025-11-02T14:12:53.54+0000 lvl=info msg="Executing migration" id="copy alert_rule_tag v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.54+0000 lvl=info msg="Executing migration" id="drop table alert_rule_tag_v1"
+logger=migrator t=2025-11-02T14:12:53.54+0000 lvl=info msg="Executing migration" id="create alert_notification table v1"
+logger=migrator t=2025-11-02T14:12:53.54+0000 lvl=info msg="Executing migration" id="Add column is_default"
+logger=migrator t=2025-11-02T14:12:53.55+0000 lvl=info msg="Executing migration" id="Add column frequency"
+logger=migrator t=2025-11-02T14:12:53.55+0000 lvl=info msg="Executing migration" id="Add column send_reminder"
+logger=migrator t=2025-11-02T14:12:53.55+0000 lvl=info msg="Executing migration" id="Add column disable_resolve_message"
+logger=migrator t=2025-11-02T14:12:53.55+0000 lvl=info msg="Executing migration" id="add index alert_notification org_id & name"
+logger=migrator t=2025-11-02T14:12:53.55+0000 lvl=info msg="Executing migration" id="Update alert table charset"
+logger=migrator t=2025-11-02T14:12:53.56+0000 lvl=info msg="Executing migration" id="Update alert_notification table charset"
+logger=migrator t=2025-11-02T14:12:53.56+0000 lvl=info msg="Executing migration" id="create notification_journal table v1"
+logger=migrator t=2025-11-02T14:12:53.56+0000 lvl=info msg="Executing migration" id="add index notification_journal org_id & alert_id & notifier_id"
+logger=migrator t=2025-11-02T14:12:53.56+0000 lvl=info msg="Executing migration" id="drop alert_notification_journal"
+logger=migrator t=2025-11-02T14:12:53.56+0000 lvl=info msg="Executing migration" id="create alert_notification_state table v1"
+logger=migrator t=2025-11-02T14:12:53.56+0000 lvl=info msg="Executing migration" id="add index alert_notification_state org_id & alert_id & notifier_id"
+logger=migrator t=2025-11-02T14:12:53.57+0000 lvl=info msg="Executing migration" id="Add for to alert table"
+logger=migrator t=2025-11-02T14:12:53.57+0000 lvl=info msg="Executing migration" id="Add column uid in alert_notification"
+logger=migrator t=2025-11-02T14:12:53.57+0000 lvl=info msg="Executing migration" id="Update uid column values in alert_notification"
+logger=migrator t=2025-11-02T14:12:53.57+0000 lvl=info msg="Executing migration" id="Add unique index alert_notification_org_id_uid"
+logger=migrator t=2025-11-02T14:12:53.57+0000 lvl=info msg="Executing migration" id="Remove unique index org_id_name"
+logger=migrator t=2025-11-02T14:12:53.58+0000 lvl=info msg="Executing migration" id="Add column secure_settings in alert_notification"
+logger=migrator t=2025-11-02T14:12:53.58+0000 lvl=info msg="Executing migration" id="alter alert.settings to mediumtext"
+logger=migrator t=2025-11-02T14:12:53.58+0000 lvl=info msg="Executing migration" id="Add non-unique index alert_notification_state_alert_id"
+logger=migrator t=2025-11-02T14:12:53.58+0000 lvl=info msg="Executing migration" id="Add non-unique index alert_rule_tag_alert_id"
+logger=migrator t=2025-11-02T14:12:53.58+0000 lvl=info msg="Executing migration" id="Drop old annotation table v4"
+logger=migrator t=2025-11-02T14:12:53.58+0000 lvl=info msg="Executing migration" id="create annotation table v5"
+logger=migrator t=2025-11-02T14:12:53.59+0000 lvl=info msg="Executing migration" id="add index annotation 0 v3"
+logger=migrator t=2025-11-02T14:12:53.59+0000 lvl=info msg="Executing migration" id="add index annotation 1 v3"
+logger=migrator t=2025-11-02T14:12:53.59+0000 lvl=info msg="Executing migration" id="add index annotation 2 v3"
+logger=migrator t=2025-11-02T14:12:53.59+0000 lvl=info msg="Executing migration" id="add index annotation 3 v3"
+logger=migrator t=2025-11-02T14:12:53.59+0000 lvl=info msg="Executing migration" id="add index annotation 4 v3"
+logger=migrator t=2025-11-02T14:12:53.59+0000 lvl=info msg="Executing migration" id="Update annotation table charset"
+logger=migrator t=2025-11-02T14:12:53.6+0000 lvl=info msg="Executing migration" id="Add column region_id to annotation table"
+logger=migrator t=2025-11-02T14:12:53.6+0000 lvl=info msg="Executing migration" id="Drop category_id index"
+logger=migrator t=2025-11-02T14:12:53.6+0000 lvl=info msg="Executing migration" id="Add column tags to annotation table"
+logger=migrator t=2025-11-02T14:12:53.6+0000 lvl=info msg="Executing migration" id="Create annotation_tag table v2"
+logger=migrator t=2025-11-02T14:12:53.6+0000 lvl=info msg="Executing migration" id="Add unique index annotation_tag.annotation_id_tag_id"
+logger=migrator t=2025-11-02T14:12:53.6+0000 lvl=info msg="Executing migration" id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
+logger=migrator t=2025-11-02T14:12:53.61+0000 lvl=info msg="Executing migration" id="Rename table annotation_tag to annotation_tag_v2 - v2"
+logger=migrator t=2025-11-02T14:12:53.61+0000 lvl=info msg="Executing migration" id="Create annotation_tag table v3"
+logger=migrator t=2025-11-02T14:12:53.61+0000 lvl=info msg="Executing migration" id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
+logger=migrator t=2025-11-02T14:12:53.61+0000 lvl=info msg="Executing migration" id="copy annotation_tag v2 to v3"
+logger=migrator t=2025-11-02T14:12:53.62+0000 lvl=info msg="Executing migration" id="drop table annotation_tag_v2"
+logger=migrator t=2025-11-02T14:12:53.62+0000 lvl=info msg="Executing migration" id="Update alert annotations and set TEXT to empty"
+logger=migrator t=2025-11-02T14:12:53.62+0000 lvl=info msg="Executing migration" id="Add created time to annotation table"
+logger=migrator t=2025-11-02T14:12:53.62+0000 lvl=info msg="Executing migration" id="Add updated time to annotation table"
+logger=migrator t=2025-11-02T14:12:53.62+0000 lvl=info msg="Executing migration" id="Add index for created in annotation table"
+logger=migrator t=2025-11-02T14:12:53.62+0000 lvl=info msg="Executing migration" id="Add index for updated in annotation table"
+logger=migrator t=2025-11-02T14:12:53.63+0000 lvl=info msg="Executing migration" id="Convert existing annotations from seconds to milliseconds"
+logger=migrator t=2025-11-02T14:12:53.63+0000 lvl=info msg="Executing migration" id="Add epoch_end column"
+logger=migrator t=2025-11-02T14:12:53.63+0000 lvl=info msg="Executing migration" id="Add index for epoch_end"
+logger=migrator t=2025-11-02T14:12:53.63+0000 lvl=info msg="Executing migration" id="Make epoch_end the same as epoch"
+logger=migrator t=2025-11-02T14:12:53.63+0000 lvl=info msg="Executing migration" id="Move region to single row"
+logger=migrator t=2025-11-02T14:12:53.63+0000 lvl=info msg="Executing migration" id="Remove index org_id_epoch from annotation table"
+logger=migrator t=2025-11-02T14:12:53.64+0000 lvl=info msg="Executing migration" id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+logger=migrator t=2025-11-02T14:12:53.64+0000 lvl=info msg="Executing migration" id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+logger=migrator t=2025-11-02T14:12:53.65+0000 lvl=info msg="Executing migration" id="Add index for org_id_epoch_end_epoch on annotation table"
+logger=migrator t=2025-11-02T14:12:53.65+0000 lvl=info msg="Executing migration" id="Remove index org_id_epoch_epoch_end from annotation table"
+logger=migrator t=2025-11-02T14:12:53.65+0000 lvl=info msg="Executing migration" id="Add index for alert_id on annotation table"
+logger=migrator t=2025-11-02T14:12:53.65+0000 lvl=info msg="Executing migration" id="create test_data table"
+logger=migrator t=2025-11-02T14:12:53.65+0000 lvl=info msg="Executing migration" id="create dashboard_version table v1"
+logger=migrator t=2025-11-02T14:12:53.65+0000 lvl=info msg="Executing migration" id="add index dashboard_version.dashboard_id"
+logger=migrator t=2025-11-02T14:12:53.66+0000 lvl=info msg="Executing migration" id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+logger=migrator t=2025-11-02T14:12:53.66+0000 lvl=info msg="Executing migration" id="Set dashboard version to 1 where 0"
+logger=migrator t=2025-11-02T14:12:53.66+0000 lvl=info msg="Executing migration" id="save existing dashboard data in dashboard_version table v1"
+logger=migrator t=2025-11-02T14:12:53.66+0000 lvl=info msg="Executing migration" id="alter dashboard_version.data to mediumtext v1"
+logger=migrator t=2025-11-02T14:12:53.66+0000 lvl=info msg="Executing migration" id="create team table"
+logger=migrator t=2025-11-02T14:12:53.66+0000 lvl=info msg="Executing migration" id="add index team.org_id"
+logger=migrator t=2025-11-02T14:12:53.67+0000 lvl=info msg="Executing migration" id="add unique index team_org_id_name"
+logger=migrator t=2025-11-02T14:12:53.67+0000 lvl=info msg="Executing migration" id="create team member table"
+logger=migrator t=2025-11-02T14:12:53.67+0000 lvl=info msg="Executing migration" id="add index team_member.org_id"
+logger=migrator t=2025-11-02T14:12:53.67+0000 lvl=info msg="Executing migration" id="add unique index team_member_org_id_team_id_user_id"
+logger=migrator t=2025-11-02T14:12:53.67+0000 lvl=info msg="Executing migration" id="add index team_member.team_id"
+logger=migrator t=2025-11-02T14:12:53.68+0000 lvl=info msg="Executing migration" id="Add column email to team table"
+logger=migrator t=2025-11-02T14:12:53.68+0000 lvl=info msg="Executing migration" id="Add column external to team_member table"
+logger=migrator t=2025-11-02T14:12:53.68+0000 lvl=info msg="Executing migration" id="Add column permission to team_member table"
+logger=migrator t=2025-11-02T14:12:53.68+0000 lvl=info msg="Executing migration" id="create dashboard acl table"
+logger=migrator t=2025-11-02T14:12:53.68+0000 lvl=info msg="Executing migration" id="add index dashboard_acl_dashboard_id"
+logger=migrator t=2025-11-02T14:12:53.69+0000 lvl=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_user_id"
+logger=migrator t=2025-11-02T14:12:53.69+0000 lvl=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_team_id"
+logger=migrator t=2025-11-02T14:12:53.69+0000 lvl=info msg="Executing migration" id="add index dashboard_acl_user_id"
+logger=migrator t=2025-11-02T14:12:53.69+0000 lvl=info msg="Executing migration" id="add index dashboard_acl_team_id"
+logger=migrator t=2025-11-02T14:12:53.69+0000 lvl=info msg="Executing migration" id="add index dashboard_acl_org_id_role"
+logger=migrator t=2025-11-02T14:12:53.69+0000 lvl=info msg="Executing migration" id="add index dashboard_permission"
+logger=migrator t=2025-11-02T14:12:53.7+0000 lvl=info msg="Executing migration" id="save default acl rules in dashboard_acl table"
+logger=migrator t=2025-11-02T14:12:53.7+0000 lvl=info msg="Executing migration" id="delete acl rules for deleted dashboards and folders"
+logger=migrator t=2025-11-02T14:12:53.7+0000 lvl=info msg="Executing migration" id="create tag table"
+logger=migrator t=2025-11-02T14:12:53.7+0000 lvl=info msg="Executing migration" id="add index tag.key_value"
+logger=migrator t=2025-11-02T14:12:53.7+0000 lvl=info msg="Executing migration" id="create login attempt table"
+logger=migrator t=2025-11-02T14:12:53.71+0000 lvl=info msg="Executing migration" id="add index login_attempt.username"
+logger=migrator t=2025-11-02T14:12:53.71+0000 lvl=info msg="Executing migration" id="drop index IDX_login_attempt_username - v1"
+logger=migrator t=2025-11-02T14:12:53.71+0000 lvl=info msg="Executing migration" id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+logger=migrator t=2025-11-02T14:12:53.71+0000 lvl=info msg="Executing migration" id="create login_attempt v2"
+logger=migrator t=2025-11-02T14:12:53.71+0000 lvl=info msg="Executing migration" id="create index IDX_login_attempt_username - v2"
+logger=migrator t=2025-11-02T14:12:53.72+0000 lvl=info msg="Executing migration" id="copy login_attempt v1 to v2"
+logger=migrator t=2025-11-02T14:12:53.72+0000 lvl=info msg="Executing migration" id="drop login_attempt_tmp_qwerty"
+logger=migrator t=2025-11-02T14:12:53.72+0000 lvl=info msg="Executing migration" id="create user auth table"
+logger=migrator t=2025-11-02T14:12:53.72+0000 lvl=info msg="Executing migration" id="create index IDX_user_auth_auth_module_auth_id - v1"
+logger=migrator t=2025-11-02T14:12:53.72+0000 lvl=info msg="Executing migration" id="alter user_auth.auth_id to length 190"
+logger=migrator t=2025-11-02T14:12:53.72+0000 lvl=info msg="Executing migration" id="Add OAuth access token to user_auth"
+logger=migrator t=2025-11-02T14:12:53.73+0000 lvl=info msg="Executing migration" id="Add OAuth refresh token to user_auth"
+logger=migrator t=2025-11-02T14:12:53.73+0000 lvl=info msg="Executing migration" id="Add OAuth token type to user_auth"
+logger=migrator t=2025-11-02T14:12:53.73+0000 lvl=info msg="Executing migration" id="Add OAuth expiry to user_auth"
+logger=migrator t=2025-11-02T14:12:53.73+0000 lvl=info msg="Executing migration" id="Add index to user_id column in user_auth"
+logger=migrator t=2025-11-02T14:12:53.73+0000 lvl=info msg="Executing migration" id="Add OAuth ID token to user_auth"
+logger=migrator t=2025-11-02T14:12:53.74+0000 lvl=info msg="Executing migration" id="create server_lock table"
+logger=migrator t=2025-11-02T14:12:53.74+0000 lvl=info msg="Executing migration" id="add index server_lock.operation_uid"
+logger=migrator t=2025-11-02T14:12:53.74+0000 lvl=info msg="Executing migration" id="create user auth token table"
+logger=migrator t=2025-11-02T14:12:53.74+0000 lvl=info msg="Executing migration" id="add unique index user_auth_token.auth_token"
+logger=migrator t=2025-11-02T14:12:53.74+0000 lvl=info msg="Executing migration" id="add unique index user_auth_token.prev_auth_token"
+logger=migrator t=2025-11-02T14:12:53.75+0000 lvl=info msg="Executing migration" id="add index user_auth_token.user_id"
+logger=migrator t=2025-11-02T14:12:53.75+0000 lvl=info msg="Executing migration" id="Add revoked_at to the user auth token"
+logger=migrator t=2025-11-02T14:12:53.75+0000 lvl=info msg="Executing migration" id="create cache_data table"
+logger=migrator t=2025-11-02T14:12:53.75+0000 lvl=info msg="Executing migration" id="add unique index cache_data.cache_key"
+logger=migrator t=2025-11-02T14:12:53.75+0000 lvl=info msg="Executing migration" id="create short_url table v1"
+logger=migrator t=2025-11-02T14:12:53.75+0000 lvl=info msg="Executing migration" id="add index short_url.org_id-uid"
+logger=migrator t=2025-11-02T14:12:53.76+0000 lvl=info msg="Executing migration" id="delete alert_definition table"
+logger=migrator t=2025-11-02T14:12:53.76+0000 lvl=info msg="Executing migration" id="recreate alert_definition table"
+logger=migrator t=2025-11-02T14:12:53.76+0000 lvl=info msg="Executing migration" id="add index in alert_definition on org_id and title columns"
+logger=migrator t=2025-11-02T14:12:53.76+0000 lvl=info msg="Executing migration" id="add index in alert_definition on org_id and uid columns"
+logger=migrator t=2025-11-02T14:12:53.76+0000 lvl=info msg="Executing migration" id="alter alert_definition table data column to mediumtext in mysql"
+logger=migrator t=2025-11-02T14:12:53.76+0000 lvl=info msg="Executing migration" id="drop index in alert_definition on org_id and title columns"
+logger=migrator t=2025-11-02T14:12:53.77+0000 lvl=info msg="Executing migration" id="drop index in alert_definition on org_id and uid columns"
+logger=migrator t=2025-11-02T14:12:53.77+0000 lvl=info msg="Executing migration" id="add unique index in alert_definition on org_id and title columns"
+logger=migrator t=2025-11-02T14:12:53.77+0000 lvl=info msg="Executing migration" id="add unique index in alert_definition on org_id and uid columns"
+logger=migrator t=2025-11-02T14:12:53.77+0000 lvl=info msg="Executing migration" id="Add column paused in alert_definition"
+logger=migrator t=2025-11-02T14:12:53.77+0000 lvl=info msg="Executing migration" id="drop alert_definition table"
+logger=migrator t=2025-11-02T14:12:53.78+0000 lvl=info msg="Executing migration" id="delete alert_definition_version table"
+logger=migrator t=2025-11-02T14:12:53.78+0000 lvl=info msg="Executing migration" id="recreate alert_definition_version table"
+logger=migrator t=2025-11-02T14:12:53.78+0000 lvl=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_id and version columns"
+logger=migrator t=2025-11-02T14:12:53.78+0000 lvl=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_uid and version columns"
+logger=migrator t=2025-11-02T14:12:53.79+0000 lvl=info msg="Executing migration" id="alter alert_definition_version table data column to mediumtext in mysql"
+logger=migrator t=2025-11-02T14:12:53.79+0000 lvl=info msg="Executing migration" id="drop alert_definition_version table"
+logger=migrator t=2025-11-02T14:12:53.79+0000 lvl=info msg="Executing migration" id="create alert_instance table"
+logger=migrator t=2025-11-02T14:12:53.79+0000 lvl=info msg="Executing migration" id="add index in alert_instance table on def_org_id, def_uid and current_state columns"
+logger=migrator t=2025-11-02T14:12:53.8+0000 lvl=info msg="Executing migration" id="add index in alert_instance table on def_org_id, current_state columns"
+logger=migrator t=2025-11-02T14:12:53.8+0000 lvl=info msg="Executing migration" id="add column current_state_end to alert_instance"
+logger=migrator t=2025-11-02T14:12:53.8+0000 lvl=info msg="Executing migration" id="remove index def_org_id, def_uid, current_state on alert_instance"
+logger=migrator t=2025-11-02T14:12:53.8+0000 lvl=info msg="Executing migration" id="remove index def_org_id, current_state on alert_instance"
+logger=migrator t=2025-11-02T14:12:53.8+0000 lvl=info msg="Executing migration" id="rename def_org_id to rule_org_id in alert_instance"
+logger=migrator t=2025-11-02T14:12:53.81+0000 lvl=info msg="Executing migration" id="rename def_uid to rule_uid in alert_instance"
+logger=migrator t=2025-11-02T14:12:53.81+0000 lvl=info msg="Executing migration" id="add index rule_org_id, rule_uid, current_state on alert_instance"
+logger=migrator t=2025-11-02T14:12:53.81+0000 lvl=info msg="Executing migration" id="add index rule_org_id, current_state on alert_instance"
+logger=migrator t=2025-11-02T14:12:53.82+0000 lvl=info msg="Executing migration" id="create alert_rule table"
+logger=migrator t=2025-11-02T14:12:53.82+0000 lvl=info msg="Executing migration" id="add index in alert_rule on org_id and title columns"
+logger=migrator t=2025-11-02T14:12:53.82+0000 lvl=info msg="Executing migration" id="add index in alert_rule on org_id and uid columns"
+logger=migrator t=2025-11-02T14:12:53.82+0000 lvl=info msg="Executing migration" id="add index in alert_rule on org_id, namespace_uid, group_uid columns"
+logger=migrator t=2025-11-02T14:12:53.83+0000 lvl=info msg="Executing migration" id="alter alert_rule table data column to mediumtext in mysql"
+logger=migrator t=2025-11-02T14:12:53.83+0000 lvl=info msg="Executing migration" id="add column for to alert_rule"
+logger=migrator t=2025-11-02T14:12:53.83+0000 lvl=info msg="Executing migration" id="add column annotations to alert_rule"
+logger=migrator t=2025-11-02T14:12:53.83+0000 lvl=info msg="Executing migration" id="add column labels to alert_rule"
+logger=migrator t=2025-11-02T14:12:53.84+0000 lvl=info msg="Executing migration" id="remove unique index from alert_rule on org_id, title columns"
+logger=migrator t=2025-11-02T14:12:53.84+0000 lvl=info msg="Executing migration" id="add index in alert_rule on org_id, namespase_uid and title columns"
+logger=migrator t=2025-11-02T14:12:53.84+0000 lvl=info msg="Executing migration" id="add dashboard_uid column to alert_rule"
+logger=migrator t=2025-11-02T14:12:53.84+0000 lvl=info msg="Executing migration" id="add panel_id column to alert_rule"
+logger=migrator t=2025-11-02T14:12:53.85+0000 lvl=info msg="Executing migration" id="add index in alert_rule on org_id, dashboard_uid and panel_id columns"
+logger=migrator t=2025-11-02T14:12:53.85+0000 lvl=info msg="Executing migration" id="create alert_rule_version table"
+logger=migrator t=2025-11-02T14:12:53.85+0000 lvl=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_uid and version columns"
+logger=migrator t=2025-11-02T14:12:53.85+0000 lvl=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_namespace_uid and rule_group columns"
+logger=migrator t=2025-11-02T14:12:53.85+0000 lvl=info msg="Executing migration" id="alter alert_rule_version table data column to mediumtext in mysql"
+logger=migrator t=2025-11-02T14:12:53.86+0000 lvl=info msg="Executing migration" id="add column for to alert_rule_version"
+logger=migrator t=2025-11-02T14:12:53.86+0000 lvl=info msg="Executing migration" id="add column annotations to alert_rule_version"
+logger=migrator t=2025-11-02T14:12:53.86+0000 lvl=info msg="Executing migration" id="add column labels to alert_rule_version"
+logger=migrator t=2025-11-02T14:12:53.86+0000 lvl=info msg="Executing migration" id=create_alert_configuration_table
+logger=migrator t=2025-11-02T14:12:53.87+0000 lvl=info msg="Executing migration" id="Add column default in alert_configuration"
+logger=migrator t=2025-11-02T14:12:53.87+0000 lvl=info msg="Executing migration" id="alert alert_configuration alertmanager_configuration column from TEXT to MEDIUMTEXT if mysql"
+logger=migrator t=2025-11-02T14:12:53.87+0000 lvl=info msg="Executing migration" id="add column org_id in alert_configuration"
+logger=migrator t=2025-11-02T14:12:53.87+0000 lvl=info msg="Executing migration" id="add index in alert_configuration table on org_id column"
+logger=migrator t=2025-11-02T14:12:53.88+0000 lvl=info msg="Executing migration" id="add configuration_hash column to alert_configuration"
+logger=migrator t=2025-11-02T14:12:53.88+0000 lvl=info msg="Executing migration" id=create_ngalert_configuration_table
+logger=migrator t=2025-11-02T14:12:53.88+0000 lvl=info msg="Executing migration" id="add index in ngalert_configuration on org_id column"
+logger=migrator t=2025-11-02T14:12:53.89+0000 lvl=info msg="Executing migration" id="add column send_alerts_to in ngalert_configuration"
+logger=migrator t=2025-11-02T14:12:53.89+0000 lvl=info msg="Executing migration" id="create provenance_type table"
+logger=migrator t=2025-11-02T14:12:53.89+0000 lvl=info msg="Executing migration" id="add index to uniquify (record_key, record_type, org_id) columns"
+logger=migrator t=2025-11-02T14:12:53.9+0000 lvl=info msg="Executing migration" id="clear migration entry \"remove unified alerting data\""
+logger=migrator t=2025-11-02T14:12:53.9+0000 lvl=info msg="Executing migration" id="move dashboard alerts to unified alerting"
+logger=migrator t=2025-11-02T14:12:53.9+0000 lvl=info msg="alerts found to migrate" alerts=0
+logger=migrator t=2025-11-02T14:12:53.9+0000 lvl=info msg="Executing migration" id="create library_element table v1"
+logger=migrator t=2025-11-02T14:12:53.9+0000 lvl=info msg="Executing migration" id="add index library_element org_id-folder_id-name-kind"
+logger=migrator t=2025-11-02T14:12:53.9+0000 lvl=info msg="Executing migration" id="create library_element_connection table v1"
+logger=migrator t=2025-11-02T14:12:53.91+0000 lvl=info msg="Executing migration" id="add index library_element_connection element_id-kind-connection_id"
+logger=migrator t=2025-11-02T14:12:53.91+0000 lvl=info msg="Executing migration" id="add unique index library_element org_id_uid"
+logger=migrator t=2025-11-02T14:12:53.91+0000 lvl=info msg="Executing migration" id="increase max description length to 2048"
+logger=migrator t=2025-11-02T14:12:53.91+0000 lvl=info msg="Executing migration" id="clone move dashboard alerts to unified alerting"
+logger=migrator t=2025-11-02T14:12:53.91+0000 lvl=info msg="Executing migration" id="create data_keys table"
+logger=migrator t=2025-11-02T14:12:53.92+0000 lvl=info msg="Executing migration" id="create kv_store table v1"
+logger=migrator t=2025-11-02T14:12:53.92+0000 lvl=info msg="Executing migration" id="add index kv_store.org_id-namespace-key"
+logger=migrator t=2025-11-02T14:12:53.92+0000 lvl=info msg="Executing migration" id="update dashboard_uid and panel_id from existing annotations"
+logger=migrator t=2025-11-02T14:12:53.93+0000 lvl=info msg="Executing migration" id="create permission table"
+logger=migrator t=2025-11-02T14:12:53.93+0000 lvl=info msg="Executing migration" id="add unique index permission.role_id"
+logger=migrator t=2025-11-02T14:12:53.93+0000 lvl=info msg="Executing migration" id="add unique index role_id_action_scope"
+logger=migrator t=2025-11-02T14:12:53.93+0000 lvl=info msg="Executing migration" id="create role table"
+logger=migrator t=2025-11-02T14:12:53.93+0000 lvl=info msg="Executing migration" id="add column display_name"
+logger=migrator t=2025-11-02T14:12:53.94+0000 lvl=info msg="Executing migration" id="add column group_name"
+logger=migrator t=2025-11-02T14:12:53.94+0000 lvl=info msg="Executing migration" id="add index role.org_id"
+logger=migrator t=2025-11-02T14:12:53.95+0000 lvl=info msg="Executing migration" id="add unique index role_org_id_name"
+logger=migrator t=2025-11-02T14:12:53.95+0000 lvl=info msg="Executing migration" id="add index role_org_id_uid"
+logger=migrator t=2025-11-02T14:12:53.95+0000 lvl=info msg="Executing migration" id="create team role table"
+logger=migrator t=2025-11-02T14:12:53.95+0000 lvl=info msg="Executing migration" id="add index team_role.org_id"
+logger=migrator t=2025-11-02T14:12:53.96+0000 lvl=info msg="Executing migration" id="add unique index team_role_org_id_team_id_role_id"
+logger=migrator t=2025-11-02T14:12:53.96+0000 lvl=info msg="Executing migration" id="add index team_role.team_id"
+logger=migrator t=2025-11-02T14:12:53.96+0000 lvl=info msg="Executing migration" id="create user role table"
+logger=migrator t=2025-11-02T14:12:53.96+0000 lvl=info msg="Executing migration" id="add index user_role.org_id"
+logger=migrator t=2025-11-02T14:12:53.96+0000 lvl=info msg="Executing migration" id="add unique index user_role_org_id_user_id_role_id"
+logger=migrator t=2025-11-02T14:12:53.97+0000 lvl=info msg="Executing migration" id="add index user_role.user_id"
+logger=migrator t=2025-11-02T14:12:53.97+0000 lvl=info msg="Executing migration" id="create builtin role table"
+logger=migrator t=2025-11-02T14:12:53.97+0000 lvl=info msg="Executing migration" id="add index builtin_role.role_id"
+logger=migrator t=2025-11-02T14:12:53.97+0000 lvl=info msg="Executing migration" id="add index builtin_role.name"
+logger=migrator t=2025-11-02T14:12:53.97+0000 lvl=info msg="Executing migration" id="Add column org_id to builtin_role table"
+logger=migrator t=2025-11-02T14:12:53.98+0000 lvl=info msg="Executing migration" id="add index builtin_role.org_id"
+logger=migrator t=2025-11-02T14:12:53.98+0000 lvl=info msg="Executing migration" id="add unique index builtin_role_org_id_role_id_role"
+logger=migrator t=2025-11-02T14:12:53.98+0000 lvl=info msg="Executing migration" id="Remove unique index role_org_id_uid"
+logger=migrator t=2025-11-02T14:12:53.98+0000 lvl=info msg="Executing migration" id="add unique index role.uid"
+logger=migrator t=2025-11-02T14:12:53.98+0000 lvl=info msg="Executing migration" id="create seed assignment table"
+logger=migrator t=2025-11-02T14:12:53.99+0000 lvl=info msg="Executing migration" id="add unique index builtin_role_role_name"
+logger=migrator t=2025-11-02T14:12:53.99+0000 lvl=info msg="Executing migration" id="add column hidden to role table"
+logger=migrator t=2025-11-02T14:12:53.99+0000 lvl=info msg="Executing migration" id="create query_history table v1"
+logger=migrator t=2025-11-02T14:12:53.99+0000 lvl=info msg="Executing migration" id="add index query_history.org_id-created_by-datasource_uid"
+logger=migrator t=2025-11-02T14:12:54+0000 lvl=info msg="Executing migration" id="create query_history_star table v1"
+logger=migrator t=2025-11-02T14:12:54+0000 lvl=info msg="Executing migration" id="add index query_history.user_id-query_uid"
+logger=migrator t=2025-11-02T14:12:54+0000 lvl=info msg="migrations completed" performed=396 skipped=0 duration=821.378672ms
+logger=sqlstore t=2025-11-02T14:12:54.01+0000 lvl=info msg="Created default admin" user=admin
+logger=sqlstore t=2025-11-02T14:12:54.01+0000 lvl=info msg="Created default organization"
+logger=plugin.loader t=2025-11-02T14:12:54.24+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-02T14:12:54.24+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.finder t=2025-11-02T14:12:54.24+0000 lvl=warn msg="Skipping finding plugins as directory does not exist" path=/workspaces/AKMinds/grafana/data/plugins
+logger=query_data t=2025-11-02T14:12:54.26+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-02T14:12:54.27+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2025-11-02T14:12:54.35+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2025-11-02T14:12:54.35+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2025-11-02T14:12:54.37+0000 lvl=info msg="storage starting"
+logger=http.server t=2025-11-02T14:12:54.44+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-02T14:15:03.88+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=10.241.0.36 time_ms=0 duration=330.056µs size=29 referer=https://musical-lamp-6qpq4vp6qq4c5q6j.github.dev/ traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-02T14:15:05.05+0000 lvl=eror msg="Request error" error="Context.HTML:html/template: \"index\" is undefined" stack="/workspaces/AKMinds/grafana/pkg/web/context.go:107 (0xf31a66)\n\t(*Context).HTML: panic(\"Context.HTML:\" + err.Error())\n/workspaces/AKMinds/grafana/pkg/api/login.go:147 (0x1f4c726)\n\t(*HTTPServer).LoginView: c.HTML(200, getViewIndex(), viewData)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:155 (0x1f6e2a5)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.func15: c.Next()\n/usr/local/go/src/net/http/server.go:2294 (0x735368)\n\tHandlerFunc.ServeHTTP: f(w, r)\n/workspaces/AKMinds/grafana/pkg/middleware/csp.go:22 (0x1f3d301)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.(*HTTPServer).addMiddlewaresAndStaticRoutes.AddCSPHeader.func14.func18: next.ServeHTTP(rw, req)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:155 (0x1f6e125)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.func10: c.Next()\n/usr/local/go/src/net/http/server.go:2294 (0x735368)\n\tHandlerFunc.ServeHTTP: f(w, r)\n/workspaces/AKMinds/grafana/pkg/web/render.go:44 (0xf3438b)\n\tRenderer.func1.1: next.ServeHTTP(rw, req)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:155 (0x1f6dfa5)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.func8: c.Next()\n/usr/local/go/src/net/http/server.go:2294 (0x735368)\n\tHandlerFunc.ServeHTTP: f(w, r)\n/workspaces/AKMinds/grafana/pkg/middleware/csrf.go:21 (0x1f3dcd6)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.(*HTTPServer).addMiddlewaresAndStaticRoutes.CSRF.func7.func17: next.ServeHTTP(w, r)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/recovery.go:168 (0x1f3dfc7)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.Recovery.func6: c.Next()\n/workspaces/AKMinds/grafana/pkg/web/context.go:32 (0xf31655)\n\tContextInvoker.Invoke: invoke(params[0].(*Context))\n/workspaces/AKMinds/grafana/pkg/web/inject.go:139 (0xf3266e)\n\t(*injector).fastInvoke: return f.Invoke(in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:117 (0xf325ab)\n\t(*injector).Invoke: return inj.fastInvoke(v, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/logger.go:33 (0x1f3eb52)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.Logger.func3: c.Next()\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/request_metrics.go:60 (0x1f3f39e)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.RequestMetrics.func2: c.Next()\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/request_tracing.go:60 (0x1f3fdd1)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.RequestTracing.func1: c.Next()\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/router.go:156 (0xf35ac4)\n\t(*Router).Handle.func1: c.run()\n/workspaces/AKMinds/grafana/pkg/web/router.go:213 (0xf366d4)\n\t(*Router).ServeHTTP: leaf.handle(rw, req, nil)\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:189 (0xf33d5c)\n\t(*Macaron).ServeHTTP: m.Router.ServeHTTP(rw, req)\n/usr/local/go/src/net/http/server.go:3301 (0x755e2d)\n\tserverHandler.ServeHTTP: handler.ServeHTTP(rw, req)\n/usr/local/go/src/net/http/server.go:2102 (0x733864)\n\t(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)\n/usr/local/go/src/runtime/asm_amd64.s:1700 (0x485e20)\n\tgoexit: BYTE\t$0x90\t// NOP\n"
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-02T14:15:07.14+0000 lvl=info msg="Request Completed" method=GET path=/favicon.ico status=302 remote_addr=10.241.0.36 time_ms=0 duration=350.733µs size=29 referer=https://musical-lamp-6qpq4vp6qq4c5q6j-3000.app.github.dev/login traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-02T14:15:08.18+0000 lvl=eror msg="Request error" error="Context.HTML:html/template: \"index\" is undefined" stack="/workspaces/AKMinds/grafana/pkg/web/context.go:107 (0xf31a66)\n\t(*Context).HTML: panic(\"Context.HTML:\" + err.Error())\n/workspaces/AKMinds/grafana/pkg/api/login.go:147 (0x1f4c726)\n\t(*HTTPServer).LoginView: c.HTML(200, getViewIndex(), viewData)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:155 (0x1f6e2a5)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.func15: c.Next()\n/usr/local/go/src/net/http/server.go:2294 (0x735368)\n\tHandlerFunc.ServeHTTP: f(w, r)\n/workspaces/AKMinds/grafana/pkg/middleware/csp.go:22 (0x1f3d301)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.(*HTTPServer).addMiddlewaresAndStaticRoutes.AddCSPHeader.func14.func18: next.ServeHTTP(rw, req)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:155 (0x1f6e125)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.func10: c.Next()\n/usr/local/go/src/net/http/server.go:2294 (0x735368)\n\tHandlerFunc.ServeHTTP: f(w, r)\n/workspaces/AKMinds/grafana/pkg/web/render.go:44 (0xf3438b)\n\tRenderer.func1.1: next.ServeHTTP(rw, req)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:155 (0x1f6dfa5)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.func8: c.Next()\n/usr/local/go/src/net/http/server.go:2294 (0x735368)\n\tHandlerFunc.ServeHTTP: f(w, r)\n/workspaces/AKMinds/grafana/pkg/middleware/csrf.go:21 (0x1f3dcd6)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.(*Macaron).UseMiddleware.(*HTTPServer).addMiddlewaresAndStaticRoutes.CSRF.func7.func17: next.ServeHTTP(w, r)\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/recovery.go:168 (0x1f3dfc7)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.Recovery.func6: c.Next()\n/workspaces/AKMinds/grafana/pkg/web/context.go:32 (0xf31655)\n\tContextInvoker.Invoke: invoke(params[0].(*Context))\n/workspaces/AKMinds/grafana/pkg/web/inject.go:139 (0xf3266e)\n\t(*injector).fastInvoke: return f.Invoke(in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:117 (0xf325ab)\n\t(*injector).Invoke: return inj.fastInvoke(v, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/logger.go:33 (0x1f3eb52)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.Logger.func3: c.Next()\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/request_metrics.go:60 (0x1f3f39e)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.RequestMetrics.func2: c.Next()\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/context.go:62 (0xf316d6)\n\t(*Context).Next: ctx.run()\n/workspaces/AKMinds/grafana/pkg/middleware/request_tracing.go:60 (0x1f3fdd1)\n\t(*HTTPServer).addMiddlewaresAndStaticRoutes.RequestTracing.func1: c.Next()\n/usr/local/go/src/reflect/value.go:584 (0x50a2e5)\n\tValue.call: call(frametype, fn, stackArgs, uint32(frametype.Size()), uint32(abid.retOffset), uint32(frameSize), &regArgs)\n/usr/local/go/src/reflect/value.go:368 (0x5093f8)\n\tValue.Call: return v.call(\"Call\", in)\n/workspaces/AKMinds/grafana/pkg/web/inject.go:159 (0xf328cd)\n\t(*injector).callInvoke: return reflect.ValueOf(f).Call(in), nil\n/workspaces/AKMinds/grafana/pkg/web/inject.go:119 (0xf32516)\n\t(*injector).Invoke: return inj.callInvoke(f, t, t.NumIn())\n/workspaces/AKMinds/grafana/pkg/web/context.go:67 (0xf31762)\n\t(*Context).run: if _, err := ctx.Invoke(ctx.handler()); err != nil {\n/workspaces/AKMinds/grafana/pkg/web/router.go:156 (0xf35ac4)\n\t(*Router).Handle.func1: c.run()\n/workspaces/AKMinds/grafana/pkg/web/router.go:213 (0xf366d4)\n\t(*Router).ServeHTTP: leaf.handle(rw, req, nil)\n/workspaces/AKMinds/grafana/pkg/web/macaron.go:189 (0xf33d5c)\n\t(*Macaron).ServeHTTP: m.Router.ServeHTTP(rw, req)\n/usr/local/go/src/net/http/server.go:3301 (0x755e2d)\n\tserverHandler.ServeHTTP: handler.ServeHTTP(rw, req)\n/usr/local/go/src/net/http/server.go:2102 (0x733864)\n\t(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)\n/usr/local/go/src/runtime/asm_amd64.s:1700 (0x485e20)\n\tgoexit: BYTE\t$0x90\t// NOP\n"
+logger=sqlstore t=2025-11-02T14:22:54.38+0000 lvl=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0
+logger=sqlstore t=2025-11-02T14:27:54.35+0000 lvl=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-05T09:13:34.23+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-05T09:13:34.23+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-11-05T09:13:34.34+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-05T09:13:34.34+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=259.285µs
+logger=plugin.loader t=2025-11-05T09:13:34.35+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-05T09:13:34.35+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.finder t=2025-11-05T09:13:34.35+0000 lvl=warn msg="Skipping finding plugins as directory does not exist" path=/workspaces/AKMinds/grafana/data/plugins
+logger=query_data t=2025-11-05T09:13:34.45+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-05T09:13:34.46+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2025-11-05T09:13:34.54+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2025-11-05T09:13:34.56+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2025-11-05T09:13:34.62+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2025-11-05T09:13:34.62+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-05T09:13:45.63+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=10.241.0.36 time_ms=0 duration=600.627µs size=29 referer=https://musical-lamp-6qpq4vp6qq4c5q6j.github.dev/ traceID=00000000000000000000000000000000
+logger=http.server t=2025-11-05T09:14:11.6+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-05T09:14:11.6+0000 lvl=info msg="New token" unhashedtoken=1431d2b20bb8878889db5a9850de31b4
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:14:17.13+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.311733ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:20:46.37+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=0 duration=922.648µs size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:21:57.41+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.221787ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:23:35.78+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=0 duration=977.028µs size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:24:16.46+0000 lvl=info msg="New token" unhashedtoken=8fe158ac0084c0a6d68069615690f017
+logger=live t=2025-11-05T09:24:18.71+0000 lvl=info msg="Initialized channel handler" channel=grafana/dashboard/uid/22r1p5zvz address=grafana/dashboard/uid/22r1p5zvz
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:24:23.32+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.465268ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:30:19.95+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=12 duration=12.072443ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:30:32.69+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2025-11-05T09:30:32.69+0000 lvl=info msg="Successful Logout" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:30:32.69+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=10.241.0.36 time_ms=10 duration=10.884656ms size=29 referer="https://musical-lamp-6qpq4vp6qq4c5q6j-3000.app.github.dev/?orgId=1" traceID=00000000000000000000000000000000
+logger=http.server t=2025-11-05T09:32:07.68+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2025-11-05T09:32:07.68+0000 lvl=info msg="New token" unhashedtoken=7540bb5f0362bf62fb61460a45b69497
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:32:13.33+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.284233ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/custom.ini
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-05T09:38:11.78+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-05T09:38:11.78+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-11-05T09:38:11.83+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-05T09:38:11.83+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=1.359391ms
+logger=plugin.loader t=2025-11-05T09:38:11.84+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-05T09:38:11.84+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.finder t=2025-11-05T09:38:11.84+0000 lvl=warn msg="Skipping finding plugins as directory does not exist" path=/workspaces/AKMinds/grafana/data/plugins
+logger=query_data t=2025-11-05T09:38:11.85+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-05T09:38:11.85+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2025-11-05T09:38:11.94+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2025-11-05T09:38:11.94+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2025-11-05T09:38:11.94+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2025-11-05T09:38:11.94+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:38:12.35+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=13 duration=13.90894ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:38:42.77+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.643832ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:41:52.65+0000 lvl=eror msg="SMTP not configured, check your grafana.ini config file's [smtp] section" error="SMTP not configured, check your grafana.ini config file's [smtp] section" remote_addr=10.241.0.36 traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:41:52.65+0000 lvl=info msg="Request Completed" method=POST path=/api/org/invites status=412 remote_addr=10.241.0.36 time_ms=6 duration=6.40854ms size=214 referer=https://musical-lamp-6qpq4vp6qq4c5q6j-3000.app.github.dev/org/users/invite traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:42:01.88+0000 lvl=eror msg="SMTP not configured, check your grafana.ini config file's [smtp] section" error="SMTP not configured, check your grafana.ini config file's [smtp] section" remote_addr=10.241.0.36 traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T09:42:01.88+0000 lvl=info msg="Request Completed" method=POST path=/api/org/invites status=412 remote_addr=10.241.0.36 time_ms=5 duration=5.243835ms size=214 referer=https://musical-lamp-6qpq4vp6qq4c5q6j-3000.app.github.dev/org/users/invite traceID=00000000000000000000000000000000
+logger=server t=2025-11-05T09:43:04.13+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2025-11-05T09:43:04.13+0000 lvl=info msg="Closing tracing"
+logger=ngalert t=2025-11-05T09:43:04.14+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/custom.ini
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-05T10:14:49.78+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-05T10:14:49.79+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-11-05T10:14:49.89+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-05T10:14:49.9+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=594.736µs
+logger=plugin.loader t=2025-11-05T10:14:49.92+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-05T10:14:49.92+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.finder t=2025-11-05T10:14:49.92+0000 lvl=warn msg="Skipping finding plugins as directory does not exist" path=/workspaces/AKMinds/grafana/data/plugins
+logger=query_data t=2025-11-05T10:14:49.94+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-05T10:14:49.94+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2025-11-05T10:14:50.03+0000 lvl=info msg="warming cache for startup"
+logger=grafanaStorageLogger t=2025-11-05T10:14:50.04+0000 lvl=info msg="storage starting"
+logger=http.server t=2025-11-05T10:14:50.04+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.multiorg.alertmanager t=2025-11-05T10:14:50.04+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T10:15:32.37+0000 lvl=info msg="New token" unhashedtoken=5df938db19e69e90889f38e4b99ea907
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T10:15:54.41+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.023426ms size=0 referer= traceID=00000000000000000000000000000000
+logger=server t=2025-11-05T10:18:52.03+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2025-11-05T10:18:52.03+0000 lvl=info msg="Closing tracing"
+logger=ngalert t=2025-11-05T10:18:52.03+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/custom.ini
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-05T12:18:23.55+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-05T12:18:23.55+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-11-05T12:18:23.65+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-05T12:18:23.66+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=255.639µs
+logger=plugin.loader t=2025-11-05T12:18:23.69+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-05T12:18:23.69+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.finder t=2025-11-05T12:18:23.69+0000 lvl=warn msg="Skipping finding plugins as directory does not exist" path=/workspaces/AKMinds/grafana/data/plugins
+logger=query_data t=2025-11-05T12:18:23.71+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-05T12:18:23.71+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2025-11-05T12:18:23.79+0000 lvl=info msg="warming cache for startup"
+logger=grafanaStorageLogger t=2025-11-05T12:18:23.82+0000 lvl=info msg="storage starting"
+logger=http.server t=2025-11-05T12:18:23.82+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.multiorg.alertmanager t=2025-11-05T12:18:23.82+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T12:19:31.79+0000 lvl=info msg="New token" unhashedtoken=007d03a7d862a4a74278399ffb911e59
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T12:19:53.18+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.339296ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T12:23:21.06+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=2 duration=2.841996ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T12:26:09.57+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=34 duration=34.872188ms size=0 referer= traceID=00000000000000000000000000000000
+logger=server t=2025-11-05T12:26:49.05+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ngalert t=2025-11-05T12:26:49.05+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=tracing t=2025-11-05T12:26:49.06+0000 lvl=info msg="Closing tracing"
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/custom.ini
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-05T13:31:14.37+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-05T13:31:14.37+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-11-05T13:31:14.56+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-05T13:31:14.57+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=513.784µs
+logger=plugin.loader t=2025-11-05T13:31:14.58+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-05T13:31:14.58+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.finder t=2025-11-05T13:31:14.58+0000 lvl=warn msg="Skipping finding plugins as directory does not exist" path=/workspaces/AKMinds/grafana/data/plugins
+logger=query_data t=2025-11-05T13:31:14.59+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-05T13:31:14.59+0000 lvl=info msg="Live Push Gateway initialization"
+logger=http.server t=2025-11-05T13:31:14.68+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert t=2025-11-05T13:31:14.68+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2025-11-05T13:31:14.68+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2025-11-05T13:31:14.68+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T13:33:25.5+0000 lvl=info msg="New token" unhashedtoken=535b261885e274814219be3106e427a6
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T13:33:51.65+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.010754ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/defaults.ini
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMinds/grafana/conf/custom.ini
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Path Home" path=/workspaces/AKMinds/grafana
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Path Data" path=/workspaces/AKMinds/grafana/data
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Path Logs" path=/workspaces/AKMinds/grafana/data/log
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMinds/grafana/data/plugins
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMinds/grafana/conf/provisioning
+logger=settings t=2025-11-05T13:34:46.99+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2025-11-05T13:34:46.99+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-11-05T13:34:47+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2025-11-05T13:34:47+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=262.16µs
+logger=plugin.loader t=2025-11-05T13:34:47.01+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMinds/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2025-11-05T13:34:47.01+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2025-11-05T13:34:47.01+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMinds/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2025-11-05T13:34:47.01+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2025-11-05T13:34:47.02+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2025-11-05T13:34:47.02+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2025-11-05T13:34:47.11+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2025-11-05T13:34:47.11+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2025-11-05T13:34:47.11+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2025-11-05T13:34:47.11+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T13:34:51.19+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=1 duration=1.114857ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T13:35:01.4+0000 lvl=info msg="Request Completed" method=GET path=/admin/plugins status=404 remote_addr=10.241.0.36 time_ms=2 duration=2.851489ms size=32973 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2025-11-05T13:35:25.44+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=10.241.0.36 time_ms=0 duration=994.993µs size=0 referer= traceID=00000000000000000000000000000000
+logger=server t=2025-11-05T13:36:34.05+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2025-11-05T13:36:34.05+0000 lvl=info msg="Closing tracing"
+logger=ngalert t=2025-11-05T13:36:34.05+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T12:59:58.84+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T12:59:58.84+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T12:59:58.86+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T12:59:58.86+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=658.87µs
+logger=plugin.loader t=2026-01-02T12:59:58.91+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T12:59:58.91+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T12:59:58.91+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T12:59:58.91+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T12:59:58.92+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T12:59:58.92+0000 lvl=info msg="Live Push Gateway initialization"
+logger=grafanaStorageLogger t=2026-01-02T12:59:59.09+0000 lvl=info msg="storage starting"
+logger=http.server t=2026-01-02T12:59:59.09+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert t=2026-01-02T12:59:59.09+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T12:59:59.09+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-02T13:00:26.92+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=152.59.8.77 time_ms=0 duration=511.555µs size=29 referer=https://zany-space-guacamole-5g754gg55xr6hv7w.github.dev/ traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-02T13:13:52.44+0000 lvl=eror msg="Invalid username or password" error="user not found" remote_addr=152.59.7.50 traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-02T13:13:52.45+0000 lvl=info msg="Request Completed" method=POST path=/login status=401 remote_addr=152.59.7.50 time_ms=15 duration=15.435214ms size=112 referer=https://zany-space-guacamole-5g754gg55xr6hv7w-3000.app.github.dev/login traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-02T13:13:59.78+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-02T13:13:59.78+0000 lvl=info msg="New token" unhashedtoken=de9e9919cee40d6a566001223eccd04e
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:26:21.05+0000 lvl=info msg="New token" unhashedtoken=ca41d1c6f6e408e76b66f50f26473379
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:26:23.07+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=7 duration=7.120864ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=848440e branch=main compiled=2026-01-02T13:21:36Z
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T13:31:27.61+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T13:31:27.61+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T13:31:27.62+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T13:31:27.62+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=293.839µs
+logger=plugin.loader t=2026-01-02T13:31:27.72+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T13:31:27.72+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T13:31:27.73+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T13:31:27.73+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T13:31:27.74+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T13:31:27.74+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-02T13:31:27.84+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T13:31:27.84+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-02T13:31:27.85+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-02T13:31:27.85+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:31:33.28+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=6 duration=6.399411ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=848440e branch=main compiled=2026-01-02T13:21:36Z
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T13:32:06.98+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T13:32:06.98+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T13:32:06.99+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T13:32:06.99+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=239.117µs
+logger=plugin.loader t=2026-01-02T13:32:07.02+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T13:32:07.02+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T13:32:07.03+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T13:32:07.03+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T13:32:07.04+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T13:32:07.05+0000 lvl=info msg="Live Push Gateway initialization"
+logger=http.server t=2026-01-02T13:32:07.14+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert t=2026-01-02T13:32:07.14+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T13:32:07.14+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2026-01-02T13:32:07.14+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:32:14.22+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=1 duration=1.561075ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:32:28.93+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-02T13:32:28.93+0000 lvl=info msg="Successful Logout" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:32:28.93+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=152.59.7.50 time_ms=5 duration=5.618497ms size=29 referer=https://zany-space-guacamole-5g754gg55xr6hv7w-3000.app.github.dev/admin/users traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-02T13:34:20.41+0000 lvl=info msg="Successful Login" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-02T13:34:20.41+0000 lvl=info msg="New token" unhashedtoken=591c520163980934a74e7a2cbdce5132
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:34:31.92+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=0 duration=940.095µs size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=848440e branch=main compiled=2026-01-02T13:21:36Z
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T13:39:53.39+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T13:39:53.39+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T13:39:53.4+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T13:39:53.4+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=286.626µs
+logger=plugin.loader t=2026-01-02T13:39:53.42+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T13:39:53.42+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T13:39:53.43+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T13:39:53.43+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T13:39:53.43+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T13:39:53.43+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-02T13:39:53.6+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T13:39:53.6+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-02T13:39:53.6+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-02T13:39:53.6+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:39:54.32+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=7 duration=7.245324ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=848440e branch=main compiled=2026-01-02T13:21:36Z
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T13:40:05.64+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T13:40:05.64+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T13:40:05.65+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T13:40:05.65+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=251.71µs
+logger=plugin.loader t=2026-01-02T13:40:05.67+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T13:40:05.67+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T13:40:05.67+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T13:40:05.67+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T13:40:05.67+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T13:40:05.67+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-02T13:40:05.74+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T13:40:05.74+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-02T13:40:05.74+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-02T13:40:05.74+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:40:06.9+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=1 duration=1.363355ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:40:40.82+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=2 duration=2.045819ms size=0 referer= traceID=00000000000000000000000000000000
+logger=server t=2026-01-02T13:45:16.95+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ngalert t=2026-01-02T13:45:16.95+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=tracing t=2026-01-02T13:45:16.95+0000 lvl=info msg="Closing tracing"
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=95be991 branch=main compiled=2026-01-02T13:46:36Z
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T13:47:07.33+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T13:47:07.33+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T13:47:07.35+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T13:47:07.36+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=1.105705ms
+logger=plugin.loader t=2026-01-02T13:47:07.39+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T13:47:07.39+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T13:47:07.4+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T13:47:07.4+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T13:47:07.4+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T13:47:07.41+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-02T13:47:07.56+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T13:47:07.56+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-02T13:47:07.57+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-02T13:47:07.57+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:47:17.34+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=23 duration=23.48538ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:49:27.03+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-02T13:49:27.03+0000 lvl=info msg="Successful Logout" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=3 orgId=1 uname=demo t=2026-01-02T13:49:27.03+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=152.59.7.50 time_ms=53 duration=53.853644ms size=29 referer="https://zany-space-guacamole-5g754gg55xr6hv7w-3000.app.github.dev/?orgId=1" traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-02T13:49:51.77+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-02T13:49:51.77+0000 lvl=info msg="New token" unhashedtoken=c798f2dd24aa8d2695cc38ff1dd36250
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:49:55.63+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.50 time_ms=2 duration=2.245983ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-02T13:51:52.29+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=95be991 branch=main compiled=2026-01-02T13:46:36Z
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/defaults.ini
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Config loaded from" file=/workspaces/AKMind-Test1/grafana/conf/custom.ini
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Path Home" path=/workspaces/AKMind-Test1/grafana
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Path Data" path=/workspaces/AKMind-Test1/grafana/data
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Path Logs" path=/workspaces/AKMind-Test1/grafana/data/log
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Path Plugins" path=/workspaces/AKMind-Test1/grafana/data/plugins
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="Path Provisioning" path=/workspaces/AKMind-Test1/grafana/conf/provisioning
+logger=settings t=2026-01-02T13:51:52.3+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-02T13:51:52.3+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-02T13:51:52.33+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-02T13:51:52.33+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=380.34µs
+logger=plugin.loader t=2026-01-02T13:51:52.51+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/AKMind-Test1/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-02T13:51:52.51+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-02T13:51:52.53+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/AKMind-Test1/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-02T13:51:52.53+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-02T13:51:52.54+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-02T13:51:52.54+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-02T13:51:52.81+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-02T13:51:52.81+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2026-01-02T13:51:52.81+0000 lvl=info msg="storage starting"
+logger=http.server t=2026-01-02T13:51:52.83+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-02T13:51:58.5+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.8.77 time_ms=2 duration=2.595125ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-03T13:32:51.82+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-03T13:32:51.82+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-03T13:32:51.85+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-03T13:32:51.86+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=415.264µs
+logger=plugin.loader t=2026-01-03T13:32:51.88+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-03T13:32:51.88+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-03T13:32:51.89+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-03T13:32:51.89+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-03T13:32:51.89+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-03T13:32:51.89+0000 lvl=info msg="Live Push Gateway initialization"
+logger=http.server t=2026-01-03T13:32:52.16+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-03T13:32:52.16+0000 lvl=info msg="storage starting"
+logger=ngalert t=2026-01-03T13:32:52.17+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-03T13:32:52.21+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=server t=2026-01-03T13:55:56+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2026-01-03T13:55:56.05+0000 lvl=info msg="Closing tracing"
+logger=ngalert t=2026-01-03T13:55:56.09+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-03T13:56:34.13+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-03T13:56:34.13+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-03T13:56:34.16+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-03T13:56:34.16+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=428.87µs
+logger=plugin.loader t=2026-01-03T13:56:34.18+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-03T13:56:34.18+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-03T13:56:34.2+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-03T13:56:34.2+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-03T14:04:43.06+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-03T14:04:43.06+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-03T14:04:43.08+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-03T14:04:43.08+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=1.368709ms
+logger=plugin.loader t=2026-01-03T14:04:43.1+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-03T14:04:43.1+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-03T14:04:43.11+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-03T14:04:43.11+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-03T14:04:43.11+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-03T14:04:43.11+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-03T14:04:43.27+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-03T14:04:43.27+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-03T14:04:43.28+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-03T14:04:43.28+0000 lvl=info msg="storage starting"
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-03T14:05:22.97+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-03T14:05:22.97+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-03T14:05:23+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-03T14:05:23.01+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=1.183597ms
+logger=plugin.loader t=2026-01-03T14:05:23.03+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-03T14:05:23.03+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-03T14:05:23.04+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-03T14:05:23.04+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-03T14:05:23.04+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-03T14:05:23.05+0000 lvl=info msg="Live Push Gateway initialization"
+logger=grafanaStorageLogger t=2026-01-03T14:05:23.3+0000 lvl=info msg="storage starting"
+logger=http.server t=2026-01-03T14:05:23.3+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert t=2026-01-03T14:05:23.3+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-03T14:05:23.31+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-03T14:08:01.78+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=152.59.7.199 time_ms=0 duration=482.82µs size=29 referer=https://opulent-carnival-r456679j5x4x2xqwj.github.dev/ traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-03T14:13:09.98+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-03T14:13:09.98+0000 lvl=info msg="New token" unhashedtoken=e0305813636b1c98c59050ffc7bafdc2
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T14:18:42.66+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.199 time_ms=4 duration=4.491297ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T14:33:46.71+0000 lvl=info msg="New token" unhashedtoken=31c48e34fcbec8cfa83d58515e5ff0a0
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T14:42:21.8+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.199 time_ms=8 duration=8.943231ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T14:46:58.23+0000 lvl=info msg="New token" unhashedtoken=02f1f0321e470cb965b9371c2d003d1a
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T14:48:34.24+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.199 time_ms=1 duration=1.064646ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T14:51:42.68+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.199 time_ms=1 duration=1.696615ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T15:03:35.24+0000 lvl=info msg="New token" unhashedtoken=6a2a73858a55d9b252c91aec5963ad2f
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-03T15:04:03.08+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.7.199 time_ms=2 duration=2.791453ms size=0 referer= traceID=00000000000000000000000000000000
+logger=server t=2026-01-03T15:08:22.51+0000 lvl=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2026-01-03T15:08:22.53+0000 lvl=info msg="Closing tracing"
+logger=ngalert t=2026-01-03T15:08:22.55+0000 lvl=eror msg="unable to fetch orgIds" msg="context canceled"
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=3b9094d branch=main compiled=2026-01-03T14:34:19Z
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-04T07:46:37.84+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-04T07:46:37.84+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-04T07:46:37.85+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-04T07:46:37.85+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=241.25µs
+logger=plugin.loader t=2026-01-04T07:46:37.92+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-04T07:46:37.92+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-04T07:46:37.95+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-04T07:46:37.95+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-04T07:46:38.05+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-04T07:46:38.05+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-04T07:46:38.2+0000 lvl=info msg="warming cache for startup"
+logger=grafanaStorageLogger t=2026-01-04T07:46:38.2+0000 lvl=info msg="storage starting"
+logger=ngalert.multiorg.alertmanager t=2026-01-04T07:46:38.2+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-04T07:46:38.24+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T07:47:12.86+0000 lvl=info msg="New token" unhashedtoken=49024e36f566d73b38db5f3239327053
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T07:47:52.19+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.098459ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T07:58:11.01+0000 lvl=info msg="New token" unhashedtoken=269bee4b233c8caa183321fd5c04b589
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:06:32.54+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=2 duration=2.567428ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:18:12.28+0000 lvl=info msg="New token" unhashedtoken=c4b19b21648845def191448df3437dc1
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:18:46.19+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.169461ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:29:45.65+0000 lvl=info msg="New token" unhashedtoken=7218bbeb37b2a43880bd165459d93fc0
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:29:57.22+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=4 duration=4.517166ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:41:22.96+0000 lvl=info msg="New token" unhashedtoken=b9808367ea07c9294e402f74818593c2
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:41:27.93+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.124117ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:46:19.28+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.061289ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:50:21.43+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.212542ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context userId=1 orgId=1 uname=admin t=2026-01-04T08:50:21.52+0000 lvl=info msg="Request Completed" method=GET path=/public/img/icons/unicons/public/img/fav32.png.svg status=404 remote_addr=47.11.45.69 time_ms=19 duration=19.086211ms size=32963 referer=https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/invite/Yibh20hG0cr0kw39DrUkD5CcBis3OZ
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:51:49+0000 lvl=info msg="New token" unhashedtoken=2406169e3b8d8aea1009447a6b99265a
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:51:49.06+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.264659ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context userId=1 orgId=1 uname=admin t=2026-01-04T08:51:49.26+0000 lvl=info msg="Request Completed" method=GET path=/public/img/icons/unicons/public/img/fav32.png.svg status=404 remote_addr=47.11.45.69 time_ms=6 duration=6.601373ms size=32963 referer=https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/invite/Yibh20hG0cr0kw39DrUkD5CcBis3OZ
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:55:26.55+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=1 duration=1.12014ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context userId=1 orgId=1 uname=admin t=2026-01-04T08:55:26.86+0000 lvl=info msg="Request Completed" method=GET path=/public/img/icons/unicons/public/img/fav32.png.svg status=404 remote_addr=47.11.45.69 time_ms=2 duration=2.62702ms size=32963 referer=https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/invite/Yibh20hG0cr0kw39DrUkD5CcBis3OZ
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:57:02.08+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=3 duration=3.03432ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T08:59:32.61+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=0 duration=888.998µs size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:00:14.38+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=0 duration=915.227µs size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:06:01.54+0000 lvl=info msg="New token" unhashedtoken=e45bb21a10da5a2e79c2656da724db41
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:06:16.15+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=3 duration=3.125292ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:09:37.77+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=4 duration=4.115056ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:17:07.85+0000 lvl=info msg="New token" unhashedtoken=72908647b63e976391104abebc4cd70a
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:31:39.89+0000 lvl=info msg="New token" unhashedtoken=81a56e96bba48fdfe7de0e8c99b9bd37
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:31:39.89+0000 lvl=info msg="Request Completed" method=DELETE path=/api/org/users/1 status=400 remote_addr=47.11.45.69 time_ms=48 duration=48.124975ms size=51 referer=https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/org/users/ traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:38:23.39+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=4 duration=4.345456ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:44:37.53+0000 lvl=info msg="New token" unhashedtoken=f19123328942e548d47c977fc5c30f68
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:49:06.82+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=505 duration=505.568295ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context userId=1 orgId=1 uname=admin t=2026-01-04T09:50:23.52+0000 lvl=info msg="Request Completed" method=GET path=/public/img/icons/unicons/.svg status=404 remote_addr=47.11.45.69 time_ms=38 duration=38.723859ms size=32963 referer="https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/?orgId=1"
+logger=context userId=1 orgId=1 uname=admin t=2026-01-04T09:50:33.39+0000 lvl=info msg="Request Completed" method=GET path=/public/img/icons/unicons/.svg status=404 remote_addr=47.11.45.69 time_ms=2 duration=2.783622ms size=32963 referer="https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/?orgId=1"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:54:53.49+0000 lvl=info msg="New token" unhashedtoken=1d75103e95d2fe2998641cd2c4791afb
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T09:54:56.45+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=110 duration=110.833669ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context userId=1 orgId=1 uname=admin t=2026-01-04T09:54:59.1+0000 lvl=info msg="Request Completed" method=GET path=/public/img/icons/unicons/undefined.svg status=404 remote_addr=47.11.45.69 time_ms=39 duration=39.776936ms size=32963 referer="https://opulent-carnival-r456679j5x4x2xqwj-3000.app.github.dev/?orgId=1"
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T10:04:47.97+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=2 duration=2.919867ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T10:04:55.37+0000 lvl=info msg="New token" unhashedtoken=e49fd182b597b0a4a11fa94088b168ba
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T10:15:04.44+0000 lvl=info msg="New token" unhashedtoken=62a7d7026a20e0b23aee3afff3ab26c0
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T10:15:04.85+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.69 time_ms=6 duration=6.606402ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-04T14:15:32.65+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-04T14:15:32.65+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-04T14:15:32.68+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-04T14:15:32.68+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=430.853µs
+logger=plugin.loader t=2026-01-04T14:15:32.75+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-04T14:15:32.75+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-04T14:15:32.76+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-04T14:15:32.76+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-04T14:15:32.76+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-04T14:15:32.77+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-04T14:15:32.9+0000 lvl=info msg="warming cache for startup"
+logger=grafanaStorageLogger t=2026-01-04T14:15:32.9+0000 lvl=info msg="storage starting"
+logger=ngalert.multiorg.alertmanager t=2026-01-04T14:15:32.9+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-04T14:15:32.92+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-04T14:18:27.86+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=152.59.9.151 time_ms=0 duration=549.744µs size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45.github.dev/ traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-04T14:22:44.69+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-04T14:22:44.69+0000 lvl=info msg="New token" unhashedtoken=a076396aa8892624be4fa7e640e4db5e
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T14:28:32.73+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.9.151 time_ms=1 duration=1.227078ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T14:29:18.07+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-04T14:29:18.07+0000 lvl=info msg="Successful Logout" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T14:29:18.07+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=152.59.9.151 time_ms=5 duration=5.590779ms size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/dashboards traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-04T14:30:26.69+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-04T14:30:26.69+0000 lvl=info msg="New token" unhashedtoken=42843870ae3c54174f6e42f6c5f50a0c
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T14:31:56.79+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.9.151 time_ms=1 duration=1.046842ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T14:32:15.95+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-04T14:32:15.95+0000 lvl=info msg="Successful Logout" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-04T14:32:15.95+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=152.59.9.151 time_ms=6 duration=6.448848ms size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/admin/users traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-04T14:35:48.84+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=152.59.9.151 time_ms=0 duration=742.263µs size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45.github.dev/ traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-04T14:39:04.05+0000 lvl=info msg="Successful Login" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-04T14:39:04.05+0000 lvl=info msg="New token" unhashedtoken=24159199f82a47258c9857cf0cba0b88
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-04T14:42:15.16+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=152.59.9.151 time_ms=1 duration=1.126771ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T15:14:29.45+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T15:14:29.45+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T15:14:29.5+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T15:14:29.5+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=250.638µs
+logger=plugin.loader t=2026-01-05T15:14:29.52+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T15:14:29.52+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T15:14:29.57+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T15:14:29.57+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T15:14:29.7+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T15:14:29.72+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-05T15:14:29.92+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T15:14:29.92+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-05T15:14:29.92+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-05T15:14:29.95+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:14:37.38+0000 lvl=info msg="New token" unhashedtoken=a7462d770184ef86e8c2bc3daf92ea1c
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:15:33.28+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.417074ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T15:21:46.48+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T15:21:46.48+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T15:21:46.52+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T15:21:46.53+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=255.787µs
+logger=plugin.loader t=2026-01-05T15:21:46.56+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T15:21:46.56+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T15:21:46.69+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T15:21:46.69+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T15:21:46.7+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T15:21:46.71+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-05T15:21:46.78+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T15:21:46.78+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2026-01-05T15:21:46.78+0000 lvl=info msg="storage starting"
+logger=http.server t=2026-01-05T15:21:46.8+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=6134e3cf35a branch=HEAD compiled=2022-04-21T10:36:58Z
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T15:21:50.82+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T15:21:50.82+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T15:21:50.84+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T15:21:50.84+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=960.732µs
+logger=plugin.loader t=2026-01-05T15:21:50.86+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T15:21:50.86+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T15:21:50.86+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T15:21:50.86+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T15:21:50.86+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T15:21:50.87+0000 lvl=info msg="Live Push Gateway initialization"
+logger=grafanaStorageLogger t=2026-01-05T15:21:50.93+0000 lvl=info msg="storage starting"
+logger=http.server t=2026-01-05T15:21:50.93+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert t=2026-01-05T15:21:50.93+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T15:21:50.93+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:21:53.51+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=5 duration=5.089543ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:23:38.69+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.271805ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:25:50.82+0000 lvl=info msg="New token" unhashedtoken=de7102fb78b4ef2728dada0bacf6edd8
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:58:29.67+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-05T15:58:29.67+0000 lvl=info msg="Successful Logout" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T15:58:29.67+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=47.11.45.28 time_ms=73 duration=73.130997ms size=29 referer="https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/?orgId=1" traceID=00000000000000000000000000000000
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=e12a78f branch=main compiled=2026-01-05T15:57:14Z
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T17:24:48.51+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T17:24:48.51+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T17:24:48.52+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T17:24:48.52+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=220.111µs
+logger=plugin.loader t=2026-01-05T17:24:48.56+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T17:24:48.56+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T17:24:48.56+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T17:24:48.56+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T17:24:48.61+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T17:24:48.62+0000 lvl=info msg="Live Push Gateway initialization"
+logger=grafanaStorageLogger t=2026-01-05T17:24:48.89+0000 lvl=info msg="storage starting"
+logger=ngalert t=2026-01-05T17:24:48.89+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T17:24:48.89+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-05T17:24:48.92+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=e12a78f branch=main compiled=2026-01-05T15:57:14Z
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T17:25:12.1+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T17:25:12.1+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T17:25:12.11+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T17:25:12.11+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=253.935µs
+logger=plugin.loader t=2026-01-05T17:25:12.13+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T17:25:12.13+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T17:25:12.13+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T17:25:12.13+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T17:25:12.13+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T17:25:12.14+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-05T17:25:12.2+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T17:25:12.2+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-05T17:25:12.2+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-05T17:25:12.2+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-05T17:30:36.09+0000 lvl=info msg="Request Completed" method=GET path=/ status=302 remote_addr=47.11.45.28 time_ms=3 duration=3.905732ms size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45.github.dev/ traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-05T17:31:44.94+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-05T17:31:44.94+0000 lvl=info msg="New token" unhashedtoken=2ea277bcbc237f96a28d303a389a09ed
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-05T17:32:29.72+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.244386ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-05T17:32:52.53+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-05T17:32:52.53+0000 lvl=info msg="Successful Logout" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-05T17:32:52.53+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=47.11.45.28 time_ms=7 duration=7.029388ms size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/org/users traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-05T17:36:33.77+0000 lvl=info msg="Successful Login" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-05T17:36:33.77+0000 lvl=info msg="New token" unhashedtoken=c41550f72ac15d238be10b06eccbae57
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:36:57.02+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.067515ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:41:05.26+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.493922ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:45:30.85+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.32164ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-05T17:47:05.02+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=e12a78f branch=main compiled=2026-01-05T15:57:14Z
+logger=settings t=2026-01-05T17:47:05.02+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T17:47:05.02+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T17:47:05.02+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T17:47:05.02+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T17:47:05.03+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T17:47:05.03+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T17:47:05.03+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T17:47:05.03+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T17:47:05.03+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T17:47:05.03+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T17:47:05.03+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T17:47:05.04+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T17:47:05.04+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=401.39µs
+logger=plugin.loader t=2026-01-05T17:47:05.06+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T17:47:05.06+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T17:47:05.07+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T17:47:05.07+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T17:47:05.08+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T17:47:05.08+0000 lvl=info msg="Live Push Gateway initialization"
+logger=grafanaStorageLogger t=2026-01-05T17:47:05.21+0000 lvl=info msg="storage starting"
+logger=ngalert t=2026-01-05T17:47:05.21+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T17:47:05.21+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-05T17:47:05.21+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:47:09.22+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.229568ms size=0 referer= traceID=00000000000000000000000000000000
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Starting Grafana" version=8.5.0 commit=e12a78f branch=main compiled=2026-01-05T15:57:14Z
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="The state of unified alerting is still not defined. The decision will be made during as we run the database migrations"
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/defaults.ini
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Config loaded from" file=/workspaces/Test2/grafana/conf/custom.ini
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Config overridden from command line" arg="app_mode=development"
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Path Home" path=/workspaces/Test2/grafana
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Path Data" path=/workspaces/Test2/grafana/data
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Path Logs" path=/workspaces/Test2/grafana/data/log
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Path Plugins" path=/workspaces/Test2/grafana/data/plugins
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="Path Provisioning" path=/workspaces/Test2/grafana/conf/provisioning
+logger=settings t=2026-01-05T17:50:42.56+0000 lvl=info msg="App mode development"
+logger=sqlstore t=2026-01-05T17:50:42.56+0000 lvl=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-05T17:50:42.57+0000 lvl=info msg="Starting DB migrations"
+logger=migrator t=2026-01-05T17:50:42.58+0000 lvl=info msg="migrations completed" performed=0 skipped=392 duration=598.008µs
+logger=plugin.loader t=2026-01-05T17:50:42.59+0000 lvl=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it." path=/workspaces/Test2/grafana/plugins-bundled/internal/input-datasource/src/module.js
+logger=plugin.manager t=2026-01-05T17:50:42.59+0000 lvl=info msg="Plugin registered" pluginId=input
+logger=plugin.signature.validator t=2026-01-05T17:50:42.6+0000 lvl=warn msg="Permitting unsigned plugin. This is not recommended" pluginID=agenty-flowcharting-panel pluginDir=/workspaces/Test2/grafana/data/plugins/grafana-flowcharting/dist
+logger=plugin.manager t=2026-01-05T17:50:42.6+0000 lvl=info msg="Plugin registered" pluginId=agenty-flowcharting-panel
+logger=query_data t=2026-01-05T17:50:42.6+0000 lvl=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-05T17:50:42.6+0000 lvl=info msg="Live Push Gateway initialization"
+logger=ngalert t=2026-01-05T17:50:42.68+0000 lvl=info msg="warming cache for startup"
+logger=ngalert.multiorg.alertmanager t=2026-01-05T17:50:42.68+0000 lvl=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2026-01-05T17:50:42.68+0000 lvl=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2026-01-05T17:50:42.68+0000 lvl=info msg="storage starting"
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:50:43.1+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=8 duration=8.066238ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:50:55.45+0000 lvl=info msg="New token" unhashedtoken=e19692822d6d9cd59fe7ac1338e9b249
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:51:17.5+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.401429ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:54:52.07+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.497209ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:55:00.89+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-05T17:55:00.89+0000 lvl=info msg="Successful Logout" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T17:55:00.89+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=47.11.45.28 time_ms=15 duration=15.194209ms size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/profile traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-05T17:55:29.36+0000 lvl=info msg="Successful Login" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-05T17:55:29.36+0000 lvl=info msg="New token" unhashedtoken=15bd7c1923acf0bcaffef9286715c4fa
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-05T17:55:33.22+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.145932ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-05T17:55:58.35+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-05T17:55:58.35+0000 lvl=info msg="Successful Logout" User=admin@localhost
+logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2026-01-05T17:55:58.35+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=47.11.45.28 time_ms=5 duration=5.181798ms size=29 referer=https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/admin/users traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-05T17:56:51.31+0000 lvl=info msg="Successful Login" User=client
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-05T17:56:51.31+0000 lvl=info msg="New token" unhashedtoken=fc90f6d53514d0ff87d287db31d06554
+logger=context traceID=00000000000000000000000000000000 userId=5 orgId=1 uname=client t=2026-01-05T17:56:56.24+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.145181ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=5 orgId=1 uname=client t=2026-01-05T18:03:03.32+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.398063ms size=0 referer= traceID=00000000000000000000000000000000
+logger=context traceID=00000000000000000000000000000000 userId=5 orgId=1 uname=client t=2026-01-05T18:03:14.42+0000 lvl=info msg="New token" unhashedtoken=
+logger=http.server t=2026-01-05T18:03:14.42+0000 lvl=info msg="Successful Logout" User=client
+logger=context traceID=00000000000000000000000000000000 userId=5 orgId=1 uname=client t=2026-01-05T18:03:14.42+0000 lvl=info msg="Request Completed" method=GET path=/logout status=302 remote_addr=47.11.45.28 time_ms=5 duration=5.091987ms size=29 referer="https://opulent-space-trout-5g7rrv6w75p7hq45-3000.app.github.dev/?orgId=1" traceID=00000000000000000000000000000000
+logger=http.server t=2026-01-05T18:03:44.86+0000 lvl=info msg="Successful Login" User=demo
+logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2026-01-05T18:03:44.86+0000 lvl=info msg="New token" unhashedtoken=c197199e35c0ade6b51c8f63f4c3c578
+logger=context traceID=00000000000000000000000000000000 userId=4 orgId=1 uname=demo t=2026-01-05T18:03:48.05+0000 lvl=info msg="Request Completed" method=GET path=/api/live/ws status=0 remote_addr=47.11.45.28 time_ms=1 duration=1.053168ms size=0 referer= traceID=00000000000000000000000000000000
